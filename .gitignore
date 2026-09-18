@@ -1,0 +1,64 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+.expo-shared/
+.expo/web/cache
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# EAS builds — preview APK / AAB are artifacts, not source
+*.apk
+*.aab
+preview.apk
+app-*.apk
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env
+.env.*
+!.env.example
+.env*.local
+
+# PMTiles / offline maps (80MB Pune) — keep small example, ignore big downloads
+*.pmtiles
+*.mbtiles
+/assets/maps/offline/*
+!/assets/maps/offline/.gitkeep
+
+# typescript
+*.tsbuildinfo
+
+# generated native folders (Expo prebuild — keep for MapLibre native, but ignore by default; remove slash to track if needed)
+# /ios
+# /android
+ios/
+android/
+
+# logs / tmp
+/tmp/
+logs/

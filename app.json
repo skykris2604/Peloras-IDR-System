@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "Peloras",
+    "slug": "peloras",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "peloras",
+    "experiments": {
+      "typedRoutes": true
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.peloras.idr"
+    },
+    "android": {
+      "package": "com.peloras.idr",
+      "adaptiveIcon": {
+        "backgroundColor": "#0B1220",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-status-bar",
+      "expo-secure-store",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Peloras to use location for dead-reckoning navigation during GNSS outages.",
+          "locationAlwaysPermission": "Allow Peloras to track position even when GNSS drops in tunnels.",
+          "locationWhenInUsePermission": "Allow Peloras to use location for navigation."
+        }
+      ],
+      [
+        "react-native-maps",
+        {
+          "iosGoogleMapsApiKey": "",
+          "androidGoogleMapsApiKey": ""
+        }
+      ],
+      "expo-sharing"
+    ]
+  }
+}
